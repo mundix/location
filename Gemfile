@@ -30,6 +30,7 @@ gem 'twitter-bootstrap-rails', '~> 3.2', '>= 3.2.2'
 
 # Docs
 # https://rubygems.org/gems/google_maps_service
+# http://www.rubydoc.info/gems/google_maps_service/0.4.2 <- Documentacion
 gem 'google_maps_service', '~> 0.4.2'
 
 # Use Unicorn as the app server
