@@ -2,7 +2,10 @@
 <h2>Sectores de:<%= @city.name %>, <%= @country.name %></h2>
   <ul>
     <li>
-      <%= link_to "Volver a #{@country.name}",country_cities_path(@country,@city) %>
+      <%= link_to "Volver a #{@country.name}",country_city_path(@country,@city) %>
+    </li>
+    <li>
+      <%= link_to "Volver a  ciudades",country_cities(@country) %>
     </li>
     <li>
       <%= link_to "Agregar Sector",new_country_city_sector_path(@country,@city) %>
@@ -11,7 +14,7 @@
     <% @city.sectors.each do |sector| %>
         <ul class="listing">
               <li class="article-title">
-                <span><%= link_to "#{sector.name}", edit_country_city_sector_path(@country,@city,sector) %></span>
+                <span><%= link_to "#{sector.name}", "#" %></span>
               </li>
         </ul>
     <% end %>

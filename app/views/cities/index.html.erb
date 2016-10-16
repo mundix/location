@@ -3,19 +3,27 @@
   <nav>
 <ul>
   <li>
-    <%= link_to "Volver a #{@country.name}",country_path(@country) %>
+    <%= link_to "Volver a paises",countries_path(@country) %>
   </li>
   <li>
-    <%= link_to "Agregar Ciudad",new_country_city_path(@country) %>
+    <%= link_to "Agregar ciudad",new_country_city_path(@country) %>
   </li>
 </ul>
   </nav>
 <div >
   <% @country.cities.each do |city| %>
       <ul class="listing">
-            <li class="article-title">
-              <span><%= link_to "#{city.name}", country_city_path(@country,city) %></span>
-            </li>
+          <li class="article-title">
+            <span><%= link_to "#{city.name}", edit_country_city_path(@country,city) %>
+              <% if city.sectors.count>0 %>
+                <small>
+                  <%= link_to ", sectores (#{city.sectors.count})",country_city_path(@country,city)  %>
+                </small>
+              <% else %>
+                <%= link_to "agregar", new_country_city_sector_path(@country,city) %>
+              <% end %>
+            </span>
+          </li>
       </ul>
   <% end %>
 </div>

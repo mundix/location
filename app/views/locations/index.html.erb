@@ -1,0 +1,28 @@
+<div class="row">
+<h2>Locaciones disponibles</h2>
+
+  <div>
+    <ul>
+      <% @countries.each do |country| %>
+        <li>
+          <%= country.name %>
+          <ul>
+            <% country.cities.each do |city| %>
+              <li>
+                <%= city.name %>
+                <ul>
+                  <% city.sectors.each do |sector| %>
+                    <li>
+                      <%= sector.name %>
+                    </li>
+                  <% end %>
+                </ul>
+              </li>
+            <% end %>
+          </ul>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+</div>
