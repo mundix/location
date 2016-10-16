@@ -15,7 +15,6 @@
 
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
-      <!--<li><%= link_to "Paises", countries_path %></li>-->
           <li class="dropdown">
 
             <%= link_to  root_path, class: "dropdown-toggle", role: "button", data: {toggle: "dropdown"}, aria: { haspopup:"true",expanded:"false" }  do %>
@@ -26,6 +25,28 @@
               <li><%= link_to "Crear Pais",new_country_path %></li>
             </ul>
           </li>
+          <% if @country %>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" role="button", data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <% if @city %>
+                  Sectores
+                <% else %>
+                  Ciudades
+                <% end %>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <% if @city %>
+                    <li><%= link_to "Volver a #{@country.name}",country_cities_path(@country,@city) %></li>
+                    <li><%= link_to "Agregar Sector",new_country_city_sector_path(@country,@city) %></li>
+                <% else %>
+                    <li><%= link_to "Volver a paises",countries_path(@country) %></li>
+                    <li><%= link_to "Agregar ciudad",new_country_city_path(@country) %></li>
+                <% end %>
+
+              </ul>
+            </li>
+          <% end %>
 
     </ul>
     <form class="navbar-form navbar-left" role="search">

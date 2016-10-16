@@ -1,15 +1,5 @@
 <div class="row">
 <h2>Ciudades de: <%= @country.name %></h2>
-  <nav>
-<ul>
-  <li>
-    <%= link_to "Volver a paises",countries_path(@country) %>
-  </li>
-  <li>
-    <%= link_to "Agregar ciudad",new_country_city_path(@country) %>
-  </li>
-</ul>
-  </nav>
 <div >
   <% @country.cities.each do |city| %>
       <ul class="listing">
