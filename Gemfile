@@ -28,6 +28,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap', '~> 4.0.0.alpha4'
 gem 'twitter-bootstrap-rails', '~> 3.2', '>= 3.2.2'
 
+# Docs
+# https://rubygems.org/gems/google_maps_service
+gem 'google_maps_service', '~> 0.4.2'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
