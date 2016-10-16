@@ -1,0 +1,22 @@
+<div class="row">
+<h2>Ciudades de <%= @country.name %></h2>
+  <nav>
+<ul>
+  <li>
+    <%= link_to "Volver a #{@country.name}",country_path(@country) %>
+  </li>
+  <li>
+    <%= link_to "Agregar Ciudad",new_country_city_path(@country) %>
+  </li>
+</ul>
+  </nav>
+<div >
+  <% @country.cities.each do |city| %>
+      <ul class="listing">
+            <li class="article-title">
+              <span><%= link_to "#{city.name}", country_city_path(@country,city) %></span>
+            </li>
+      </ul>
+  <% end %>
+</div>
+</div>
