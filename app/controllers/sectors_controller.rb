@@ -57,8 +57,5 @@ class SectorsController < ApplicationController
     @sector = Sector.find(params[:id])
   end
 
-  def init_google_places
-    @client = GooglePlaces::Client.new('AIzaSyDpbSkYMrPiBfDApjWSH04B1XDlt3k18xg')
-    @client.spots_by_query('Gazcue Santo Domingo')
-  end
+
 end
