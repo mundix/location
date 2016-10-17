@@ -34,12 +34,15 @@ gem 'twitter-bootstrap-rails', '~> 3.2', '>= 3.2.2'
 # gem 'google_maps_service', '~> 0.4.2' <- no lo estoy usando
 #
 # https://github.com/apneadiving/Google-Maps-for-Rails
+# Hay que correr $ rails g gmaps4rails:copy_js
+# Para que funcione
 gem 'gmaps4rails'
 # Ejemplo de gmaps4rails
 # https://binarapps.com/blog/integration-of-googlemaps-in-rails-4 <- este es el que estoy usando
 #
 # API KEY google Map
 # API key: AIzaSyDpbSkYMrPiBfDApjWSH04B1XDlt3k18xg
+# Esto no estoy seguro de si es obligatorio para el gmaps4rails
 gem 'underscore-rails'
 #
 # StockOverfow

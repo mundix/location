@@ -26,13 +26,13 @@ class SectorsController < ApplicationController
 
   end
   def update
-    render json: @client
-    # if @sector.update(get_sector)
-    #   flash[:success] = "Sector actualizado"
-    #   redirect_to country_city_path(@country,@city)
-    # else
-    #   render :edit
-    # end
+    # render json: @client
+    if @sector.update(get_sector)
+      flash[:success] = "Sector actualizado"
+      redirect_to country_city_path(@country,@city)
+    else
+      render :edit
+    end
   end
   def show
 

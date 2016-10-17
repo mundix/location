@@ -38,10 +38,15 @@
               <ul class="dropdown-menu">
                 <% if @city %>
                     <li><%= link_to "Volver a #{@country.name}",country_cities_path(@country,@city) %></li>
-                    <li><%= link_to "Agregar Sector",new_country_city_sector_path(@country,@city) %></li>
+                    <% if @city.id? %>
+                      <li><%= link_to "Agregar Sector",new_country_city_sector_path(@country,@city) %></li>
+                    <% end %>
                 <% else %>
+
                     <li><%= link_to "Volver a paises",countries_path(@country) %></li>
+                    <% if @country.id? %>
                     <li><%= link_to "Agregar ciudad",new_country_city_path(@country) %></li>
+                    <% end %>
                 <% end %>
 
               </ul>
