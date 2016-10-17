@@ -31,7 +31,25 @@ gem 'twitter-bootstrap-rails', '~> 3.2', '>= 3.2.2'
 # Docs
 # https://rubygems.org/gems/google_maps_service
 # http://www.rubydoc.info/gems/google_maps_service/0.4.2 <- Documentacion
-gem 'google_maps_service', '~> 0.4.2'
+# gem 'google_maps_service', '~> 0.4.2' <- no lo estoy usando
+#
+# https://github.com/apneadiving/Google-Maps-for-Rails
+gem 'gmaps4rails'
+# Ejemplo de gmaps4rails
+# https://binarapps.com/blog/integration-of-googlemaps-in-rails-4 <- este es el que estoy usando
+#
+# API KEY google Map
+# API key: AIzaSyDpbSkYMrPiBfDApjWSH04B1XDlt3k18xg
+gem 'underscore-rails'
+#
+# StockOverfow
+# Documentos para enviar data desde google map
+# https://binarapps.com/blog/integration-of-googlemaps-in-rails-4
+# http://stackoverflow.com/questions/22562782/trying-to-use-a-form-to-input-marker-with-javascript-into-gmaps4rails
+
+# Google Places
+# https://github.com/qpowell/google_places
+gem 'google_places'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
